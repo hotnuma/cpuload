@@ -15,11 +15,6 @@ cpp_args = [
     '-O2',
 ]
 
-#app_deps = [
-#    dependency('libpcre'),
-#    dependency('tinycpp', static : true),
-#]
-
 app_src = [
     'cpuload.cpp',
     'main.cpp',
@@ -28,11 +23,8 @@ app_src = [
 executable(
     'cpuload',
     cpp_args : cpp_args,
-#    dependencies : app_deps,
     sources : app_src,
     install : true,
-#    link_args : link_args,
-#    link_with : dependency('tinycpp'),
 )
 
 
