@@ -15,15 +15,10 @@ cpp_args = [
     '-O2',
 ]
 
-#link_args = [
-#    '-static',
-#    '-Wl,-s'
+#app_deps = [
+#    dependency('libpcre'),
+#    dependency('tinycpp', static : true),
 #]
-
-app_deps = [
-    dependency('libpcre'),
-    dependency('tinycpp', static : true),
-]
 
 app_src = [
     'cpuload.cpp',
@@ -33,7 +28,7 @@ app_src = [
 executable(
     'cpuload',
     cpp_args : cpp_args,
-    dependencies : app_deps,
+#    dependencies : app_deps,
     sources : app_src,
     install : true,
 #    link_args : link_args,

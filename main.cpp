@@ -1,10 +1,11 @@
 #include "cpuload.h"
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 
-#include <print.h>
+//#include <print.h>
 
 int main(int argc, char **argv)
 {
@@ -22,7 +23,7 @@ int main(int argc, char **argv)
         }
         else
         {
-            print("wrong option");
+            printf("wrong option\n");
             return 1;
         }
 
@@ -36,7 +37,7 @@ int main(int argc, char **argv)
     {
         double cpu = cpuload();
 
-        print("load : %lf", cpu);
+        printf("load : %lf\n", cpu);
 
         sleep(tick);
     }
