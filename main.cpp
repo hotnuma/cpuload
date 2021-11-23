@@ -9,6 +9,8 @@
 
 int main(int argc, char **argv)
 {
+    setbuf(stdout, NULL);
+    
     int tick = 1;
 
     int n = 1;
