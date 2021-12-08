@@ -39,7 +39,7 @@ int main(int argc, char **argv)
     {
         double cpu = cpuload();
 
-        printf("load : %lf\n", cpu);
+        printf("cpuload : %lf\n", cpu);
 
         sleep(tick);
     }
